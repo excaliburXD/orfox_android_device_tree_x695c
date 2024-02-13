@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/infinix/x695c
+LOCAL_PATH := device/infinix/X695C
 
 # A/B
 AB_OTA_PARTITIONS += \
@@ -38,6 +38,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
+
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # V A/B
 ENABLE_VIRTUAL_AB := true
