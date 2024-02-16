@@ -15,7 +15,8 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-    	export PLATFORM_VERSION="16.1.0"
+    	export PLATFORM_VERSION= "99.87.36"
+        export PLATFORM_VERSION_LAST_STABLE= "$PLATFORM_VERSION"
    	export PLATFORM_SECURITY_PATCH="2099-12-31"
      	export TW_DEFAULT_LANGUAGE="en"
     	export OF_DEVICE_ALT="X695C"
